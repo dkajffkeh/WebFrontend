@@ -1,0 +1,101 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #34495e;
+  height: 100vh;
+}
+
+#scatchArea {
+  background-color: lightpink;
+  height: 200px;
+  width: 250px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#dot_wraper {
+  display: flex;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+  animation: loading 2s ease-in-out infinite;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: whitesmoke;
+}
+
+.dot2 {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#bar_wraper {
+  height: 50%;
+  width: 18%;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stick {
+  height: 40px;
+  width: 5px;
+  background: whitesmoke;
+  transform-origin: top left;
+  animation: loading2 1.5s ease-in-out infinite;
+}
+
+.stick1 {
+  animation-delay: 0.1s;
+}
+.stick2 {
+  animation-delay: 0.2s;
+}
+.stick3 {
+  animation-delay: 0.3s;
+}
+.stick4 {
+  animation-delay: 0.4s;
+}
+.stick5 {
+  animation-delay: 0.5s;
+}
+
+@keyframes loading2 {
+  0% {
+    transform: scaleY(0.1);
+    background: #fff;
+  }
+  50% {
+    transform: scaleY(1);
+    background: #2ecc71;
+  }
+  100% {
+    transform: scaleY(0.1);
+    background: transparent;
+  }
+}
